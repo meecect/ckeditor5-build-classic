@@ -29,32 +29,32 @@ import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefrom
 import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 
-export class ClassicEditor extends ClassicEditorBase {}
-export class BalloonEditor extends BalloonEditorBase {}
+class ClassicEditor extends ClassicEditorBase {}
+class BalloonEditor extends BalloonEditorBase {}
 
 // Plugins to include in the build.
 const plugins = [
-  Essentials,
-  UploadAdapter,
-  Autoformat,
-  Bold,
-  Italic,
-  BlockQuote,
-  CKFinder,
-  EasyImage,
-  Heading,
-  Image,
-  ImageCaption,
-  ImageStyle,
-  ImageToolbar,
-  ImageUpload,
-  Link,
-  List,
-  MediaEmbed,
-  Paragraph,
-  PasteFromOffice,
-  Table,
-  TableToolbar
+	Essentials,
+	UploadAdapter,
+	Autoformat,
+	Bold,
+	Italic,
+	BlockQuote,
+	CKFinder,
+	EasyImage,
+	Heading,
+	Image,
+	ImageCaption,
+	ImageStyle,
+	ImageToolbar,
+	ImageUpload,
+	Link,
+	List,
+	MediaEmbed,
+	Paragraph,
+	PasteFromOffice,
+	Table,
+	TableToolbar
 ];
 
 ClassicEditor.builtinPlugins = plugins;
@@ -101,3 +101,6 @@ const config = {
 ClassicEditor.defaultConfig = config;
 BalloonEditor.defaultConfig = config;
 
+export default {
+	ClassicEditor, BalloonEditor
+};
