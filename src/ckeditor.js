@@ -29,8 +29,8 @@ import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefrom
 import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 
-class ClassicEditor extends ClassicEditorBase {}
-class BalloonEditor extends BalloonEditorBase {}
+export class ClassicEditor extends ClassicEditorBase {}
+export class BalloonEditor extends BalloonEditorBase {}
 
 // Plugins to include in the build.
 const plugins = [
@@ -101,6 +101,3 @@ const config = {
 ClassicEditor.defaultConfig = config;
 BalloonEditor.defaultConfig = config;
 
-export default {
-    ClassicEditor, BalloonEditor
-};
