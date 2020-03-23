@@ -1,5 +1,5 @@
 /**
- * @license Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
+ * @license Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
  */
 
@@ -22,6 +22,7 @@ import ImageCaption from '@ckeditor/ckeditor5-image/src/imagecaption';
 import ImageStyle from '@ckeditor/ckeditor5-image/src/imagestyle';
 import ImageToolbar from '@ckeditor/ckeditor5-image/src/imagetoolbar';
 import ImageUpload from '@ckeditor/ckeditor5-image/src/imageupload';
+import Indent from '@ckeditor/ckeditor5-indent/src/indent';
 import Link from '@ckeditor/ckeditor5-link/src/link';
 import List from '@ckeditor/ckeditor5-list/src/list';
 import MediaEmbed from '@ckeditor/ckeditor5-media-embed/src/mediaembed';
@@ -29,6 +30,7 @@ import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
 import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefromoffice';
 import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
+import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
 
 class ClassicEditor extends ClassicEditorBase {}
 class BalloonEditor extends BalloonEditorBase {}
@@ -50,13 +52,15 @@ const plugins = [
 	ImageStyle,
 	ImageToolbar,
 	ImageUpload,
+	Indent,
 	Link,
 	List,
 	MediaEmbed,
 	Paragraph,
 	PasteFromOffice,
 	Table,
-	TableToolbar
+	TableToolbar,
+	TextTransformation
 ];
 
 ClassicEditor.builtinPlugins = plugins;
@@ -73,6 +77,10 @@ const config = {
 			'link',
 			'bulletedList',
 			'numberedList',
+			'|',
+			'indent',
+			'outdent',
+			'|',
 			'imageUpload',
 			'blockQuote',
 			'insertTable',

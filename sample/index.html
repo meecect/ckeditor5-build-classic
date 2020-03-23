@@ -28,17 +28,23 @@
 
 <script src="../build/ckeditor.js"></script>
 <script>
-    CKEDITOR.ClassicEditor
-        .create( document.querySelector( '#classic-editor' ) )
-        .catch( err => {
-            console.error( err.stack );
-        } );
 
-    CKEDITOR.BalloonEditor
-        .create( document.querySelector( '#ballon-editor' ) )
-        .catch( err => {
-            console.error( err.stack );
-        } );
+  CKEDITOR.ClassicEditor.create( document.querySelector( '#classic-editor' ) )
+    .then( editor => {
+      window.classic_editor = editor;
+    } )
+    .catch( error => {
+      console.error( 'There was a problem initializing the editor.', error );
+    } );
+
+  CKEDITOR.BalloonEditor.create( document.querySelector( '#ballon-editor' ) )
+    .then( editor => {
+      window.ballon_editor = editor;
+    } )
+    .catch( error => {
+      console.error( 'There was a problem initializing the editor.', error );
+    } );
+
 </script>
 
 </body>
